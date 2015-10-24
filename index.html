@@ -1,21 +1,30 @@
 <html>
+
+<script type="text/javascript">
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var strcount
+var x = new Date()
+document.getElementById('ct').innerHTML = x;
+tt=display_c();
+}
+</script>
+
 <head>
 
 
 
 </head>
-	<body>
+	<body onload=display_ct();>
 <div id="sekcja">
 	<h1>
 		Informacje personalne
 	</h1>
-	<script type="text/javascript">
-    for (;;)
-    {
-    var czas = new Date(); 
-    document.write(czas);
-    } 
-</script>
+	<span id='ct' ></span>
 <div id="sekcja">
 	<h1>
 		Edukacja
