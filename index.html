@@ -1,117 +1,162 @@
 <html>
-<head>
-<meta charset="utf-8">
-<script type="text/javascript">
-function display_c(){
-var refresh=1000; // Refresh rate in milli seconds
-mytime=setTimeout('display_ct()',refresh)
-}
-
-function display_ct() {
-var strcount
-var x = new Date()
-document.getElementById('ct').innerHTML = x;
-tt=display_c();
-}
-</script>
-#1
-{
-	background-color: rgb(255.255.0);
-}
-<style>
-.list {
-    display:none; 
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    function display_c(){
+    var refresh=1000; // Refresh rate in milli seconds
+    mytime=setTimeout('display_ct()',refresh)
+    }
+    function display_ct() {
+    var strcount
+    var x = new Date()
+    document.getElementById('ct').innerHTML = x;
+    tt=display_c();
+    }
+    </script>
+    <style>
+    .list {
+    display:none;
     height:auto;
     margin:0;
-}
-.show {
-    display: none; 
-}
-.hide:target + .show {
-    display: inline; 
-}
-.hide:target {
-    display: none; 
-}
-.hide:target ~ .list {
-    display:inline; 
-}
-
-/*style the (+) and (-) */
-.hide, .show {
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  font-size: 20px;
-  color: #fff;
-  text-shadow: 0 1px 0 #666;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 1px 1px 2px #000;
-  background: #cccbbb;
-  opacity: .95;
-  margin-right: 0;
-  float: left;
-  margin-bottom: 25px;
-}
-
-.hide:hover, .show:hover {
-  color: #eee;
-  text-shadow: 0 0 1px #666;
-  text-decoration: none;
-  box-shadow: 0 0 4px #222 inset;
-  opacity: 1;
-  margin-bottom: 25px;
-}
-
-.list p{
+    }
+    .show {
+    display: none;
+    }
+    .hide:target + .show {
+    display: inline;
+    }
+    .hide:target {
+    display: none;
+    }
+    .hide:target ~ .list {
+    display:inline;
+    }
+    /*style the (+) and (-) */
+    .hide, .show {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 1px 0 #666;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px #000;
+    background: #cccbbb;
+    opacity: .95;
+    margin-right: 0;
+    float: left;
+    margin-bottom: 25px;
+    }
+    .hide:hover, .show:hover {
+    color: #eee;
+    text-shadow: 0 0 1px #666;
+    text-decoration: none;
+    box-shadow: 0 0 4px #222 inset;
+    opacity: 1;
+    margin-bottom: 25px;
+    }
+    .list p{
     height:auto;
     margin:0;
+    }
+    .naglowek {
+    height: auto;
+    width: 90%;
+    line-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    font-style: italic;
+    }
+    #div1
+    {
+    float:left;
+    }
+    #div2
+    {
+    float:left;
+    }
+    #div3
+    {
+    float: left;
+    }
+    #obrazek
+    {
+float:left;
+width: 20%;
+margin-left: auto;
+margin-right: auto;
+padding: 10px;
+background-color: lightgray;
+    }
+.portfolio-hover {
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0;
+background: rgba(254,209,54,.9);
+-webkit-transition: all ease .5s;
+-moz-transition: all ease .5s;
+transition: all ease .5s;
 }
-.naglowek {
-  height: auto;
-  width: 90%;
-  line-height: 20px;
-  padding-left: 20px;
-  margin-bottom: 25px;
-  font-style: italic;
-}
-</style>
-<!-- <div class="FAQ">
-    <a href="#hide1" class="hide" id="hide1">+</a>
-    <a href="#show1" class="show" id="show1">-</a>
-    <div class="question"> Question Question Question Question Question Question Question Question Question Question Question? </div>
-        <div class="list">
-            <p>Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer </p>
+    </style>
+    <!-- <div class="FAQ">
+      <a href="#hide1" class="hide" id="hide1">+</a>
+      <a href="#show1" class="show" id="show1">-</a>
+      <div class="question"> Question Question Question Question Question Question Question Question Question Question Question? </div>
+      <div class="list">
+        <p>Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer </p>
+      </div>
+    </div> -->
+  </head>
+  <body onload=display_ct();>
+    <div>
+      <div class="portfolio-hover">
+      </div>
+      <img src="tapeta1.jpg" id="obrazek">
+    </div>
+    <div>
+      <img src="tapeta2.jpg" id="obrazek">
+    </div>
+        <div>
+      <img src="tapeta3.jpg" id="obrazek">
+    </div>
+        <div>
+      <img src="tapeta4.jpg" id="obrazek">
+    </div>
+    <div style="clear:both">
+    </div>
+    <div id="div1">
+      <a href="#hide1" class="hide" id="hide1">+</a>
+      <a href="#show1" class="show" id="show1">-</a>
+      <div class="naglowek">
+        <h1>Informacje personalne</h1>
+      </div>
+      <div class="list">
+        <ul>
+          <li>Imię: Mateusz</li>
+          <li>Nazwisko: Kaczmarek</li>
+          <li>Wiek: 18</li>
+          <li>Miejsce zamieszkania: Poznan</li>
+        </ul>
+      </div>
+    </div>
+      
+      <div id="div2">
+        <h1>Edukacja</h1>
+        <ul>
+          <li>Gimnazjum: nr 64 w Poznaniu</li>
+          <li>Technikum: Zespół Szkół Komunikacji im. Hipolita Cegielskiego</li>
+        </ul>
+      </div>
+        <div id="div3">
+          <h1>Doswiadczenie</h1>
+          <ul>
+            <li>Smuteq ale brak</li>
+          </ul>
         </div>
-</div> -->
-</head>
-	<body onload=display_ct();>
-<div id="div1">    
-	<a href="#hide1" class="hide" id="hide1">+</a>
-    <a href="#show1" class="show" id="show1">-</a>
-    <div class="naglowek">
-	<h1>Informacje personalne</h1>
-	</div>
-	<div class="list">
-	<ul>
-		<li>Imię: Mateusz</li>
-		<li>Nazwisko: Kaczmarek</li>
-		<li>Wiek: 18</li>
-		<li>Miejsce zamieszkania: Poznan</li>	
-	</ul>
-	</div>
-	<span id='ct' ></span>
-<div id="2">
-	<h1>Edukacja</h1>
-	<ul>
-		<li>Gimnazjum: nr 64 w Poznaniu</li>
-		<li>Technikum: Zespół Szkół Komunikacji im. Hipolita Cegielskiego</li>
-	</ul>
-<div id="3">
-	<h1>Doswiadczenie</h1>
-	<ul>
-		<li>Smuteq ale brak</li>
-	</ul>
-    </body>
-</html>
+        <div style="clear:both">
+    </div>
+    <span id='ct' ></span>
+        </body>
+      </html>
